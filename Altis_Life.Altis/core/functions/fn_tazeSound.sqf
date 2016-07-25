@@ -1,11 +1,11 @@
 /*
-    File: fn_tazeSound.sqf
-    Author:
-
-    Description:
-
+	File: fn_tazeSound.sqf
+	Author: 
+	
+	Description:
+	
 */
 private["_source"];
-_source = [_this,0,objNull,[objNull]] call BIS_fnc_param;
-if (isNull _source) exitWith {};
+_source = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
+if(isNull _source) exitWith {};
 _source say3D "Tazersound";

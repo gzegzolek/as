@@ -13,10 +13,9 @@ class CfgRemoteExec {
         jip = 0;
 
         /* Client only functions */
-        F(life_fnc_AAN,CLIENT)
         F(life_fnc_addVehicle2Chain,CLIENT)
-        F(life_fnc_adminID,CLIENT)
-        F(life_fnc_adminInfo,CLIENT)
+        F(life_fnc_adminid,CLIENT)
+        F(life_fnc_admininfo,CLIENT)
         F(life_fnc_bountyReceive,CLIENT)
         F(life_fnc_copLights,CLIENT)
         F(life_fnc_copSearch,CLIENT)
@@ -32,6 +31,7 @@ class CfgRemoteExec {
         F(life_fnc_jail,CLIENT)
         F(life_fnc_jailMe,CLIENT)
         F(life_fnc_knockedOut,CLIENT)
+        F(life_fnc_backupCall,CLIENT)
         F(life_fnc_licenseCheck,CLIENT)
         F(life_fnc_licensesRead,CLIENT)
         F(life_fnc_lightHouse,CLIENT)
@@ -48,6 +48,7 @@ class CfgRemoteExec {
         F(life_fnc_revived,CLIENT)
         F(life_fnc_robPerson,CLIENT)
         F(life_fnc_robReceive,CLIENT)
+		F(life_fnc_lockDown,CLIENT)
         F(life_fnc_searchClient,CLIENT)
         F(life_fnc_seizeClient,CLIENT)
         F(life_fnc_soundDevice,CLIENT)
@@ -57,7 +58,10 @@ class CfgRemoteExec {
         F(life_fnc_ticketPrompt,CLIENT)
         F(life_fnc_vehicleAnimate,CLIENT)
         F(life_fnc_wantedList,CLIENT)
+        F(life_fnc_handleDowned,CLIENT)
         F(life_fnc_wireTransfer,CLIENT)
+		F(life_fnc_vehicleEmpd,CLIENT)
+		F(life_fnc_vehicleWarned,CLIENT)
         F(SOCK_fnc_dataQuery,CLIENT)
         F(SOCK_fnc_insertPlayerInfo,CLIENT)
         F(SOCK_fnc_requestReceived,CLIENT)
@@ -67,7 +71,20 @@ class CfgRemoteExec {
         F(TON_fnc_clientGangLeft,CLIENT)
         F(TON_fnc_clientGetKey,CLIENT)
         F(TON_fnc_clientMessage,CLIENT)
+        F(life_fnc_setupCellPhone,CLIENT)
         F(TON_fnc_player_query,CLIENT)
+        F(life_fnc_vAH_reciever,CLIENT)
+		F(life_fnc_Lizenzsehen,CLIENT)
+        F(life_fnc_civRestrain,CLIENT)
+        F(life_fnc_medicrestrain,CLIENT)
+		F(life_fnc_hasOrgan,CLIENT)
+        F(life_fnc_ticketPromptmedic,CLIENT)
+        F(life_fnc_ticketPaidmedic,CLIENT)
+        F(life_fnc_teargas,CLIENT)
+        F(life_fnc_nitro,CLIENT)
+        F(life_fnc_masked,CLIENT)
+		F(seizePlayerWeaponAction,CLIENT)
+			
 
         /* Server only functions */
         F(BIS_fnc_execVM,SERVER)
@@ -93,7 +110,7 @@ class CfgRemoteExec {
         F(TON_fnc_getVehicles,SERVER)
         F(TON_fnc_insertGang,SERVER)
         F(TON_fnc_keyManagement,SERVER)
-        F(TON_fnc_manageSC,SERVER)
+        F(TON_fnc_managesc,SERVER)
         F(TON_fnc_pickupAction,SERVER)
         F(TON_fnc_removeGang,SERVER)
         F(TON_fnc_sellHouse,SERVER)
@@ -105,11 +122,17 @@ class CfgRemoteExec {
         F(TON_fnc_updateHouseContainers,SERVER)
         F(TON_fnc_updateHouseTrunk,SERVER)
         F(TON_fnc_vehicleCreate,SERVER)
+		F(TON_fnc_insureCar,SERVER)
         F(TON_fnc_vehicleDelete,SERVER)
         F(TON_fnc_vehicleStore,SERVER)
         F(TON_fnc_vehicleUpdate,SERVER)
-        F(TON_fnc_handleBlastingCharge,SERVER)
-        F(TON_fnc_adjustPrices,SERVER)
+        F(DB_fnc_cellPhoneRequest,SERVER)
+		F(DB_fnc_saveCellPhone,SERVER)
+        F(TON_fnc_vAH_update,SERVER)
+		F(TON_fnc_vAH_init,SERVER)
+		
+        
+		
 
         /* HeadlessClient only functions */
         F(HC_fnc_addContainer,HC)
@@ -148,6 +171,7 @@ class CfgRemoteExec {
         F(BIS_fnc_effectKilledAirDestruction,ANYONE)
         F(BIS_fnc_effectKilledSecondaries,ANYONE)
         F(life_fnc_animSync,ANYONE)
+        F(life_fnc_playSound,ANYONE)
         F(life_fnc_broadcast,ANYONE)
         F(life_fnc_colorVehicle,ANYONE)
         F(life_fnc_corpse,ANYONE)
@@ -156,10 +180,13 @@ class CfgRemoteExec {
         F(life_fnc_jumpFnc,ANYONE)
         F(life_fnc_lockVehicle,ANYONE)
         F(life_fnc_pulloutVeh,ANYONE)
+        F(life_fnc_pushFunction,ANYONE)
         F(life_fnc_say3D,ANYONE)
         F(life_fnc_setFuel,ANYONE)
         F(life_fnc_simDisable,ANYONE)
         F(SPY_fnc_notifyAdmins,ANYONE)
+        F(life_fnc_clientSound,ANYONE)
+		F(life_fnc_armageddon,ANYONE)
     };
 
     class Commands {

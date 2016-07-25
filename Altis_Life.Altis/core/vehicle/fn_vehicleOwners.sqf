@@ -1,16 +1,17 @@
 /*
-    File: fn_vehicleOwners.sqf
-    Author:
-
-    Description:
-    Pulled from old system, will be revised for new system.
+	File: fn_vehicleOwners.sqf
+	Author: 
+	
+	Description:
+	Pulled from old system, will be revised for new system.
 */
-private["_return","_format"];
+private["_data","_return","_format"];
+_data = _this select 0;
 _return = "";
 
 {
-    _format = format["%1<br/>",_x select 1];
-    _return = _return + _format;
-} forEach (_this select 0);
+	_format = format["%1<br/>",_x select 1];
+	_return = _return + _format;
+} forEach _data;
 
 _return;

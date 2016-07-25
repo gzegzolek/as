@@ -1,12 +1,12 @@
 #include "..\..\script_macros.hpp"
 /*
-    File: fn_adminTeleport.sqf
-    Author: ColinM9991
-    Credits: To original script author(s)
-    Description:
-    Teleport to chosen position.
+	File: fn_adminTeleport.sqf
+	Author: ColinM9991
+	Credits: To original script author(s)
+	Description:
+	Teleport to chosen position.
 */
-if (FETCH_CONST(life_adminlevel) < 3) exitWith {closeDialog 0;};
+if(FETCH_CONST(life_adminlevel) < 3) exitWith {closeDialog 0;};
 
 [] spawn {
   while {dialog} do {

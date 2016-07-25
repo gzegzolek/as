@@ -9,7 +9,7 @@
     NiiRoZz : Added multiprocess
 */
 private["_vendor","_type","_itemInfo","_oldItem","_newItemWeight","_newItem","_oldItemWeight","_cost","_upp","_hasLicense","_itemName","_oldVal","_ui","_progress","_pgText","_cP","_materialsRequired","_materialsGiven","_noLicenseCost","_text","_filter","_totalConversions","_minimumConversions"];
-_vendor = [_this,0,objNull,[objNull]] call BIS_fnc_param;
+_vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _type = [_this,3,"",[""]] call BIS_fnc_param;
 //Error check
 if (isNull _vendor || _type isEqualTo "" || (player distance _vendor > 10)) exitWith {};
@@ -29,10 +29,10 @@ _itemInfo = [_materialsRequired,_materialsGiven,_noLicenseCost,(localize format[
 if (count _itemInfo isEqualTo 0) exitWith {life_action_inUse = false;};
 
 //Setup vars.
-_oldItem = _itemInfo select 0;
-_newItem = _itemInfo select 1;
-_cost = _itemInfo select 2;
-_upp = _itemInfo select 3;
+_oldItem = SEL(_itemInfo,0);
+_newItem = SEL(_itemInfo,1);
+_cost = SEL(_itemInfo,2);
+_upp = SEL(_itemInfo,3);
 _exit = false;
 if (count _oldItem isEqualTo 0) exitWith {life_action_inUse = false;};
 
